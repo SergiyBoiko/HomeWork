@@ -31,6 +31,10 @@ public class SimpleDesing extends JFrame{
 
 	}
 	public static void main (String [] args) {
+
+		button.addActionListener(e ->{
+		});
+
 		window = new SimpleDesing();
 		window.setVisible(true);
 	}
