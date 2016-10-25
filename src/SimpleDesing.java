@@ -33,6 +33,15 @@ public class SimpleDesing extends JFrame{
 	public static void main (String [] args) {
 
 		button.addActionListener(e ->{
+			if(ValidateNumber.checkPhoneNumber(inputField.getText())==false){
+				outputField.setText(inputField.getText()+" - "+"Phone number incorrect\n"+"Please enter the phone number");
+				inputField.setText("");
+
+			}else{
+				outputField.setText(inputField.getText()+" - "+"Phone number correct\n"+
+						""+Calculations.calculationCharNumber(inputField.getText()));
+				inputField.setText("");
+			}
 		});
 
 		window = new SimpleDesing();
