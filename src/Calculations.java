@@ -1,7 +1,7 @@
 public class Calculations {
-
 	private static String resultLine;
 	private static int amountOfCharacters;
+	private static String resultIs;
 	private static int counter;
 
 	private static String withOffPlus(String text){
@@ -9,7 +9,7 @@ public class Calculations {
 		return str;
 
 	}
-	
+
 	private static int sumArrayChar(char [] array){
 		int sum = 0;
 		for( final char c : array){
@@ -18,7 +18,7 @@ public class Calculations {
 		return sum;
 
 	}
-	
+
 	public static String calculationCharNumber(String text){
 		final String line = withOffPlus(text);
 		char [] array = line.toCharArray ();
@@ -30,8 +30,25 @@ public class Calculations {
 			String tmp = Integer.toString(amountOfCharacters);
 			array = tmp.toCharArray();
 			counter++;
+		}	
+		switch(amountOfCharacters){
+		case 1: resultIs = "Final result is One";
+		System.out.println("Final result is One");
+		break;
+		case 2: resultIs = "Final result is Two";
+		System.out.println("Final result is Two");
+		break;
+		case 3: resultIs = "Final result is Three";
+		System.out.println("Final result is Three");
+		break;
+		case 4: resultIs = "Final result is Four";
+		System.out.println("Final result is Four");
+		break;
+		default: resultIs = "Result as a digit";
+		System.out.println("Result as a digit");
 		}
-		return text;
 
+		return resultLine+"\n"+resultIs;
 	}
 }
+
