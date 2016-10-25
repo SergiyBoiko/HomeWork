@@ -1,8 +1,8 @@
 public class Calculations {
-	private static String resultLine;
 	private static int amountOfCharacters;
 	private static String resultIs;
 	private static int counter;
+	private static String resultLine;
 
 	private static String withOffPlus(String text){
 		String str = text.replaceAll("[-+)(]","");
@@ -23,10 +23,12 @@ public class Calculations {
 		final String line = withOffPlus(text);
 		char [] array = line.toCharArray ();
 		counter = 1;
+		resultLine = "";
 		while(array.length>1){
 			amountOfCharacters = sumArrayChar(array);
-			resultLine = counter+"st round of calculation, sum is "+amountOfCharacters;
-			System.out.println(resultLine);
+			final String result = counter+"st round of calculation, sum is "+amountOfCharacters;
+			resultLine = resultLine + result+"\n";
+			System.out.println(result);
 			String tmp = Integer.toString(amountOfCharacters);
 			array = tmp.toCharArray();
 			counter++;
@@ -48,7 +50,6 @@ public class Calculations {
 		System.out.println("Result as a digit");
 		}
 
-		return resultLine+"\n"+resultIs;
+		return resultLine+resultIs;
 	}
 }
-
