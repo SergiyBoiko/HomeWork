@@ -14,4 +14,9 @@ public class Calculations {
 		return sum;
 
 	}
+	
+	public static String calculationCharNumber(String text){
+		return text;
+
+	}
 }
